@@ -1,6 +1,8 @@
-# 📊 AI Batch QA
+﻿# ai-batch-qa
 
-> Auto-detect quality issues in batch AI image generation — blur, artifacts, overexposure, noise. CLIP-based scoring, A/B comparison, parameter grids.
+# ðŸ“Š AI Batch QA
+
+> Auto-detect quality issues in batch AI image generation â€” blur, artifacts, overexposure, noise. CLIP-based scoring, A/B comparison, parameter grids.
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue?logo=python)
 ![Pillow](https://img.shields.io/badge/Pillow-10+-blue)
@@ -44,12 +46,12 @@ python -m batch_qa.cli analyze ./my_images/
 ## Features
 
 ### Quality Analysis
-- **Sharpness** — Laplacian variance detection for blur
-- **Brightness** — Over/underexposure detection
-- **Contrast** — Dynamic range analysis
-- **Noise** — High-frequency content estimation
-- **Artifact detection** — JPEG compression artifacts, banding patterns
-- **Resolution check** — Flags images under 512px
+- **Sharpness** â€” Laplacian variance detection for blur
+- **Brightness** â€” Over/underexposure detection
+- **Contrast** â€” Dynamic range analysis
+- **Noise** â€” High-frequency content estimation
+- **Artifact detection** â€” JPEG compression artifacts, banding patterns
+- **Resolution check** â€” Flags images under 512px
 
 ### A/B Comparison
 - Side-by-side metric comparison
@@ -128,4 +130,85 @@ Contributions welcome! Especially:
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) for details.
+MIT License â€” see [LICENSE](LICENSE) for details.
+
+
+## Installation
+
+### Prerequisites
+
+- Python 3.8 or higher
+- pip (Python package manager)
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/darshd9941/ai-batch-qa.git
+cd ai-batch-qa
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Environment Setup
+
+1. Copy the example environment file:
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit .env and add your API keys:
+   ```bash
+   # Required for Claude vision features
+   ANTHROPIC_API_KEY=your-api-key-here
+   ```
+
+## Usage
+
+### Web App (if applicable)
+
+```bash
+streamlit run app.py
+```
+
+### CLI Usage
+
+```bash
+python main.py --help
+```
+
+### Python API
+
+```python
+from module import MainClass
+
+# Initialize the tool
+tool = MainClass()
+
+# Use the tool
+result = tool.process("input")
+print(result)
+```
+
+## Configuration
+
+- .env - Environment variables (API keys, settings)
+- config.yaml - Configuration file (if applicable)
+
+## Examples
+
+See the examples/ directory for detailed usage examples.
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## License
+
+See LICENSE file for details.
